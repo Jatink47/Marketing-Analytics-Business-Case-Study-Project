@@ -4,19 +4,20 @@
 Conducted a detailed marketing analysis for ShopEasy, an online retail platform facing declining engagement and conversions. Analyzed key KPIs such as conversion rate, engagement rate, AOV, and customer feedback to uncover drop-off points, optimize content strategy, and deliver actionable insights for improving marketing ROI and customer satisfaction.
 
 **Goals**
-• **Increase Conversion Rates:**
+**Increase Conversion Rates:**
  • Goal: Identify factors impacting the conversion rate and provide recommendations to improve it.
  • Insight: Highlight key stages where visitors drop off and suggest improvements to optimize the conversion funnel.
- • **Enhance Customer Engagement:**
+**Enhance Customer Engagement:**
  • Goal:Determine which types of content drive the highest engagement. 
  • Insight:Analyze interaction levels with different types of marketing content to inform better content strategies.
- •**Improve Customer Feedback Scores:**
+**Improve Customer Feedback Scores:**
  • Goal:Understand common themes in customer reviews and provide actionable insights.
  • Insight:Identify recurring positive and negative feedback to guide product and service improvements
 
 **Project Structure**
 
 **Product Categorization**
+ 
  Used the Products table to categorize products based on their price into high medium lowusing SQL CASE statements.
 ```sql
  SELECT 
@@ -38,6 +39,7 @@ ON
     c.GeographyID = g.GeographyID;
  ```
 **Customer-Geography Merge**
+ 
  Merged Customers table with Geography using a LEFT JOIN to enrich customer records with geographical information
  ```sql
 SELECT 
@@ -56,6 +58,7 @@ FROM
     dbo.products;
 ```
 **Cleaning Customer Reviews**
+
  Cleaned the customer reviewstable by removing extra spaces from the review text
 
 ```sql
@@ -70,6 +73,7 @@ FROM
     dbo.customer_reviews;
 ```
 **Engagement Data Normalization**
+
 Cleaned and normalized the Engagement_datatable to standardize engagement metrics (e.g., scaling, null handling, and formatting)
 ```sql
 SELECT 
@@ -89,6 +93,7 @@ WHERE
     ContentType != 'Newsletter'; 
 ```
 **Handling Duplicates**
+
  In the customer journey table, afterselecting uniquerowsanotherissue sof null values in duration column and which is solved using the sub query
 ```sql
  WITH DuplicateRecords AS (
@@ -147,8 +152,9 @@ FROM
     ) AS subquery  
 WHERE 
     row_num = 1; 
-    ```
+```
 **Sentiment Analysis**
+ 
  Exported customer reviews to Jupyter Notebook and performed sentiment analysis using Python libraries to classify reviews as Positive, Neutral, or Negative
 ```python
 # pip install pandas nltk pyodbc sqlalchemy
@@ -253,46 +259,79 @@ customer_reviews_df.to_csv('fact_customer_reviews_with_sentiment.csv', index=Fal
 ```
 
 **Data Visualization**
+
 Identified key issues including fluctuating conversion rates, declining social media engagement, and subpar customer satisfaction—each of which is explored in detail below.
 
 ![image alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200655.png)
- **Decreased Conversion Rates:** The conversion rate demonstrated a strong rebound in December, reaching 10.2%, despite a notable dip to 5.0% in October.
-**Reduced Customer Engagement:** There is a decline in overall social media engagement, with views dropping throughout the year.While clicks and likes are low compared to views, the click-through rate stands at 15.37%, meaning that engaged users are still interacting effectively
-**Customer Feedback Analysis:** Customer ratings have remained consistent, averaging around 3.7 throughout the year.Although stable, the average rating is below the target of 4.0, suggesting a need for focusedimprovements in customer satisfaction, for products below 3,5.
 
-1.  **Decreased Conversion Rates:**
+**Decreased Conversion Rates:** 
 
-Seasonal Peaks: February, July, and especially January (18.5%) showed strong conversion rates, with Ski Boots reaching 150%.
+The conversion rate demonstrated a strong rebound in December, reaching 10.2%, despite a notable dip to 5.0% in October.
 
-Lowest Month: May had the lowest conversion (4.3%), indicating the need for improved marketing strategies during this period.
+**Reduced Customer Engagement:** 
 
-Insight: Seasonal demand and targeted campaigns significantly influence conversion performance.
+There is a decline in overall social media engagement, with views dropping throughout the year.While clicks and likes are low compared to views, the click-through rate stands at 15.37%, meaning that engaged users are still interacting effectively
+**Customer Feedback Analysis:** 
+
+Customer ratings have remained consistent, averaging around 3.7 throughout the year.Although stable, the average rating is below the target of 4.0, suggesting a need for focusedimprovements in customer satisfaction, for products below 3,5.
+
+1.**Decreased Conversion Rates:**
+
+**Seasonal Peaks:** 
+
+February, July, and especially January (18.5%) showed strong conversion rates, with Ski Boots reaching 150%.
+
+**Lowest Month:** 
+
+May had the lowest conversion (4.3%), indicating the need for improved marketing strategies during this period.
+
+**Insight:** 
+
+Seasonal demand and targeted campaigns significantly influence conversion performance.
 
 ![image alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200705.png)
 
 2.**Reduced Customer Engagement:**
-Declining Views: Engagement dropped steadily after July, following peak activity in February and July.
 
-Low Interaction: Clicks and likes stayed low despite high views, highlighting a gap in content effectiveness.
+**Declining Views:** Engagement dropped steadily after July, following peak activity in February and July.
 
-Content Performance: Blogs performed best—especially in April and July—while videos and social media posts saw moderate engagement.
+**Low Interaction:**
+
+Clicks and likes stayed low despite high views, highlighting a gap in content effectiveness.
+
+**Content Performance:** 
+
+Blogs performed best—especially in April and July—while videos and social media posts saw moderate engagement.
 
 ![image alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200718.png)
 
 3. **Customer Feedback Analysis:**
-Rating Distribution: Most reviews are positive, with the majority at 4 and 5 stars; low ratings form a small portion.
 
-Sentiment Analysis: Positive sentiment dominates (275 reviews), though 82 negative and several mixed reviews indicate areas for improvement.
+**Rating Distribution:** 
 
-Improvement Opportunity: Addressing mixed feedback can help turn neutral experiences into positive ones, boosting overall satisfaction.
+Most reviews are positive, with the majority at 4 and 5 stars; low ratings form a small portion.
+
+**Sentiment Analysis:**
+
+Positive sentiment dominates (275 reviews), though 82 negative and several mixed reviews indicate areas for improvement.
+
+**Improvement Opportunity:** 
+
+Addressing mixed feedback can help turn neutral experiences into positive ones, boosting overall satisfaction.
 
 ![iamge alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200725.png)
 
 **Goals & Actions Summary:**
 
-**Increase Conversion Rates:** Analyzed drop-off points in the conversion funnel and recommended focusing on high-performing products (e.g., Kayaks, Ski Boots) with seasonal campaigns to boost sales.
+**Increase Conversion Rates:** 
 
-**Enhance Customer Engagement:** Suggested revamping the content strategy with interactive formats and stronger CTAs, especially during low-engagement months (Sep–Dec).
+Analyzed drop-off points in the conversion funnel and recommended focusing on high-performing products (e.g., Kayaks, Ski Boots) with seasonal campaigns to boost sales.
 
-**Improve Customer Feedback Scores:** Proposed a feedback loop to address mixed/negative reviews, with targeted follow-ups to improve satisfaction and push average ratings toward the 4.0 goal.
+**Enhance Customer Engagement:** 
+
+Suggested revamping the content strategy with interactive formats and stronger CTAs, especially during low-engagement months (Sep–Dec).
+
+**Improve Customer Feedback Scores:** 
+
+Proposed a feedback loop to address mixed/negative reviews, with targeted follow-ups to improve satisfaction and push average ratings toward the 4.0 goal.
 
