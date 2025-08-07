@@ -255,7 +255,7 @@ customer_reviews_df.to_csv('fact_customer_reviews_with_sentiment.csv', index=Fal
 **Data Visualization**
 Identified key issues including fluctuating conversion rates, declining social media engagement, and subpar customer satisfaction—each of which is explored in detail below.
 
-![image alt]()
+![image alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200655.png)
  **Decreased Conversion Rates:** The conversion rate demonstrated a strong rebound in December, reaching 10.2%, despite a notable dip to 5.0% in October.
 **Reduced Customer Engagement:** There is a decline in overall social media engagement, with views dropping throughout the year.While clicks and likes are low compared to views, the click-through rate stands at 15.37%, meaning that engaged users are still interacting effectively
 **Customer Feedback Analysis:** Customer ratings have remained consistent, averaging around 3.7 throughout the year.Although stable, the average rating is below the target of 4.0, suggesting a need for focusedimprovements in customer satisfaction, for products below 3,5.
@@ -268,7 +268,7 @@ Lowest Month: May had the lowest conversion (4.3%), indicating the need for impr
 
 Insight: Seasonal demand and targeted campaigns significantly influence conversion performance.
 
-![image alt]()
+![image alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200705.png)
 
 2.**Reduced Customer Engagement:**
 Declining Views: Engagement dropped steadily after July, following peak activity in February and July.
@@ -277,7 +277,7 @@ Low Interaction: Clicks and likes stayed low despite high views, highlighting a 
 
 Content Performance: Blogs performed best—especially in April and July—while videos and social media posts saw moderate engagement.
 
-![image alt]()
+![image alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200718.png)
 
 3. **Customer Feedback Analysis:**
 Rating Distribution: Most reviews are positive, with the majority at 4 and 5 stars; low ratings form a small portion.
@@ -286,7 +286,7 @@ Sentiment Analysis: Positive sentiment dominates (275 reviews), though 82 negati
 
 Improvement Opportunity: Addressing mixed feedback can help turn neutral experiences into positive ones, boosting overall satisfaction.
 
-![iamge alt]()
+![iamge alt](https://github.com/Jatink47/Marketing-Analytics-Business-Case-Study-Project/blob/bb8a0162440d67674183071166bd95ef91e26361/Screenshot%202025-08-07%20200725.png)
 
 **Goals & Actions Summary:**
 
